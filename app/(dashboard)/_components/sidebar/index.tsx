@@ -23,7 +23,6 @@ import { useAiPanel } from "@/store/use-ai-panel";
 
 import { List } from "./list";
 import { NewButton } from "./new-button";
-import { AiPanel } from "./ai-panel";
 
 export const Sidebar = () => {
 
