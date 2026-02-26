@@ -18,7 +18,7 @@ export async function POST(req: Request) {
         }
 
         const body = await req.json();
-        const { boardId, message, role, boardState } = body;
+        const { boardId, message, role, boardState, image } = body;
 
         if (!boardId || !message || !role) {
             return NextResponse.json(
@@ -84,6 +84,23 @@ export async function POST(req: Request) {
 `;
         }
 
+        const userParts: any[] = [
+            { text: `Board Title: ${boardTitle}\nCurrent User Role: ${role}\n\nWhiteboard Content (Text from Shapes):\n${extractedShapes || "(No text on board)"}\n\nUser Question:\n${message}` }
+        ];
+
+        // Process attached base64 image if it exists
+        if (image && typeof image === "string") {
+            const matches = image.match(/^data:(image\/[a-zA-Z]+);base64,(.+)$/);
+            if (matches && matches.length === 3) {
+                userParts.push({
+                    inlineData: {
+                        mimeType: matches[1],
+                        data: matches[2]
+                    }
+                });
+            }
+        }
+
         const aiResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
             method: "POST",
             headers: {
@@ -96,7 +113,7 @@ export async function POST(req: Request) {
                 contents: [
                     {
                         role: "user",
-                        parts: [{ text: `Board Title: ${boardTitle}\nCurrent User Role: ${role}\n\nWhiteboard Content (Text from Shapes):\n${extractedShapes || "(No text on board)"}\n\nUser Question:\n${message}` }]
+                        parts: userParts
                     }
                 ],
                 generationConfig: {

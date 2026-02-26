@@ -13,12 +13,10 @@ const font = Kalam({
 });
 
 const calculateFontSize = (width: number, height: number) => {
-  const maxFontSize = 96;
-  const scaleFactor = 0.5;
-  const fontSizeBasedOnHeight = height * scaleFactor;
-  const fontSizeBasedOnWidth = width * scaleFactor;
-
-  return Math.min(fontSizeBasedOnHeight, fontSizeBasedOnWidth, maxFontSize);
+  // We use a fixed base font size for new infinite-expanding text
+  // so that typing doesn't recursively scale the text infinitely.
+  // Old components might rely on height, but this keeps it consistent.
+  return 48;
 };
 
 type TextProps = {
@@ -36,14 +34,31 @@ export const Text = ({
 }: TextProps) => {
   const { x, y, width, height, fill, value } = layer;
 
-  const updateValue = useMutation(({ storage }, newValue: string) => {
+  const updateValueAndSize = useMutation(({ storage }, newValue: string, reqWidth: number, reqHeight: number) => {
     const liveLayers = storage.get("layers");
+    const liveLayer = liveLayers.get(id);
+    if (!liveLayer) return;
 
-    liveLayers.get(id)?.set("value", newValue);
-  }, []);
+    liveLayer.update({
+      value: newValue,
+      width: Math.max(width, reqWidth),
+      height: Math.max(height, reqHeight),
+    });
+  }, [width, height, id]);
 
   const handleContentChange = (e: ContentEditableEvent) => {
-    updateValue(e.target.value);
+    // Determine internal required width by measuring via scrollWidth
+    let reqWidth = width;
+    let reqHeight = height;
+
+    // We can extract the target element to measure accurately
+    const target = e.currentTarget as HTMLElement;
+    if (target) {
+      reqWidth = target.scrollWidth;
+      reqHeight = target.scrollHeight;
+    }
+
+    updateValueAndSize(e.target.value, reqWidth, reqHeight);
   };
 
   return (
@@ -58,15 +73,18 @@ export const Text = ({
       }}
     >
       <ContentEditable
-        html={value || "Text"}
+        html={value || ""}
         onChange={handleContentChange}
         className={cn(
-          "h-full w-full flex items-center justify-center text-center drop-shadow-md outline-none",
+          "h-full w-full drop-shadow-md outline-none whitespace-nowrap",
           font.className,
         )}
         style={{
           fontSize: calculateFontSize(width, height),
           color: fill ? colorToCSS(fill) : "#000",
+          width: "max-content",
+          minWidth: "100%",
+          minHeight: "100%",
         }}
       />
     </foreignObject>

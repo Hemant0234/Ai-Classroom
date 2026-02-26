@@ -14,6 +14,18 @@ export default defineSchema({
       searchField: "title",
       filterFields: ["orgId"],
     }),
+  compilers: defineTable({
+    title: v.string(),
+    orgId: v.string(),
+    authorId: v.string(),
+    authorName: v.string(),
+    imageUrl: v.string(),
+  })
+    .index("by_org", ["orgId"])
+    .searchIndex("search_title", {
+      searchField: "title",
+      filterFields: ["orgId"],
+    }),
   userFavourites: defineTable({
     orgId: v.string(),
     userId: v.string(),

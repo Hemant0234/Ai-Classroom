@@ -21,13 +21,23 @@ export async function POST(req: NextRequest) {
 
   const { room } = await req.json();
 
-  const board = await convex.query(api.board.get, { id: room });
+  let board;
+  try {
+    board = await convex.query(api.board.get, { id: room as any });
+  } catch { }
 
-  if (!board) {
-    return new NextResponse("Board not found", { status: 404 });
+  let compiler;
+  try {
+    compiler = await convex.query(api.compiler.get, { id: room as any });
+  } catch { }
+
+  const entity = board || compiler;
+
+  if (!entity) {
+    return new NextResponse("Room not found", { status: 404 });
   }
 
-  if (board.orgId && board.orgId !== orgId) {
+  if (entity.orgId && entity.orgId !== orgId) {
     return new NextResponse("Unauthorized", { status: 403 });
   }
 

@@ -58,18 +58,6 @@ export const Sidebar = () => {
           </Hint>
         </div>
 
-        <Hint label="Source Code" side="right" align="start" sideOffset={18}>
-          <a
-            href={links.sourceCode}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="bg-slate-600 h-full w-full flex items-center justify-center rounded-md opacity-60 hover:opacity-100 transition"
-          >
-
-            <Github className="text-white h-5 w-5" />
-          </a>
-        </Hint>
-
 
         <div className="relative">
 
@@ -138,8 +126,8 @@ export const Sidebar = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-600 px-4 py-2">E14843</td>
-                      <td className="border border-gray-600 px-4 py-2">Er. Navneet</td>
+                      <td className="border border-gray-600 px-4 py-2">E18792</td>
+                      <td className="border border-gray-600 px-4 py-2">Er. Harshal Jain</td>
                     </tr>
                   </tbody>
                 </table>
@@ -153,12 +141,12 @@ export const Sidebar = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-600 px-4 py-2">E12859</td>
-                      <td className="border border-gray-600 px-4 py-2">Monika Anand</td>
+                      <td className="border border-gray-600 px-4 py-2">E14816</td>
+                      <td className="border border-gray-600 px-4 py-2">Er. Malti Rani</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-600 px-4 py-2">E16835</td>
-                      <td className="border border-gray-600 px-4 py-2">Er. Rashmi</td>
+                      <td className="border border-gray-600 px-4 py-2">E17771</td>
+                      <td className="border border-gray-600 px-4 py-2">Er. Monika Kumari</td>
                     </tr>
                   </tbody>
                 </table>

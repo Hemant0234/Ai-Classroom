@@ -53,8 +53,17 @@ import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/config";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { ModalProvider } from "@/providers/modal-provider";
-import { ConnectPanel } from "@/components/connect-panel";
-import { AiPanel } from "@/components/ai-panel";
+import dynamic from "next/dynamic";
+
+const ConnectPanel = dynamic(
+  () => import("@/components/connect-panel").then((mod) => mod.ConnectPanel),
+  { ssr: false }
+);
+
+const AiPanel = dynamic(
+  () => import("@/components/ai-panel").then((mod) => mod.AiPanel),
+  { ssr: false }
+);
 
 import "./globals.css";
 

@@ -34,7 +34,7 @@ export const Toolbar = ({
     <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-x-4 pointer-events-none z-10">
       <div className="bg-white/70 backdrop-blur-md rounded-full p-2 flex gap-x-1 items-center shadow-xl border border-white flex-wrap pointer-events-auto">
         <ToolButton
-          label="Select"
+          label="Select (V)"
           icon={MousePointer2}
           onClick={() => setCanvasState({ mode: CanvasMode.None })}
           isActive={
@@ -47,7 +47,7 @@ export const Toolbar = ({
         />
 
         <ToolButton
-          label="Text"
+          label="Text (T)"
           icon={Type}
           onClick={() =>
             setCanvasState({
@@ -62,7 +62,7 @@ export const Toolbar = ({
         />
 
         <ToolButton
-          label="Sticky note"
+          label="Sticky note (S)"
           icon={StickyNote}
           onClick={() =>
             setCanvasState({
@@ -77,7 +77,7 @@ export const Toolbar = ({
         />
 
         <ToolButton
-          label="Rectangle"
+          label="Rectangle (R)"
           icon={Square}
           onClick={() =>
             setCanvasState({
@@ -92,7 +92,7 @@ export const Toolbar = ({
         />
 
         <ToolButton
-          label="Ellipse"
+          label="Ellipse (O)"
           icon={Circle}
           onClick={() =>
             setCanvasState({
@@ -107,7 +107,7 @@ export const Toolbar = ({
         />
 
         <ToolButton
-          label="Pen"
+          label="Pen (P)"
           icon={Pencil}
           onClick={() =>
             setCanvasState({
@@ -120,13 +120,13 @@ export const Toolbar = ({
 
       <div className="bg-white/70 backdrop-blur-md rounded-full p-2 flex items-center shadow-xl border border-white pointer-events-auto">
         <ToolButton
-          label="Undo"
+          label="Undo (Ctrl+Z)"
           icon={Undo2}
           onClick={undo}
           isDisabled={!canUndo}
         />
         <ToolButton
-          label="Redo"
+          label="Redo (Ctrl+Y)"
           icon={Redo2}
           onClick={redo}
           isDisabled={!canRedo}

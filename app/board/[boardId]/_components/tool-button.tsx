@@ -26,10 +26,11 @@ export const ToolButton = ({
         disabled={isDisabled}
         aria-disabled={isDisabled}
         onClick={onClick}
-        size="icon"
         variant={isActive ? "boardActive" : "board"}
+        className="px-3 py-2 flex items-center justify-center gap-x-1.5"
       >
-        <Icon />
+        <Icon className="h-4 w-4" />
+        <span className="text-xs font-semibold">{label}</span>
       </Button>
     </Hint>
   );

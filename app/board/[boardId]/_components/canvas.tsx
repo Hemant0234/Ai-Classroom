@@ -274,6 +274,15 @@ export const Canvas = ({ boardId }: CanvasProps) => {
     ({ setMyPresence }, e: React.PointerEvent) => {
       e.preventDefault();
 
+      // Middle click panning
+      if (e.buttons === 4) {
+        setCamera((camera) => ({
+          x: camera.x + e.movementX,
+          y: camera.y + e.movementY,
+        }));
+        return;
+      }
+
       const current = pointerEventToCanvasPoint(e, camera);
 
       if (canvasState.mode === CanvasMode.Pressing) {
@@ -413,9 +422,47 @@ export const Canvas = ({ boardId }: CanvasProps) => {
           if (e.ctrlKey || e.metaKey) {
             if (e.shiftKey || e.altKey) history.redo();
             else history.undo();
-
             break;
           }
+          break;
+        case "v":
+        case "V":
+          setCanvasState({ mode: CanvasMode.None });
+          break;
+        case "r":
+        case "R":
+          setCanvasState({
+            mode: CanvasMode.Inserting,
+            layerType: LayerType.Rectangle,
+          });
+          break;
+        case "o":
+        case "O":
+          setCanvasState({
+            mode: CanvasMode.Inserting,
+            layerType: LayerType.Ellipse,
+          });
+          break;
+        case "t":
+        case "T":
+          setCanvasState({
+            mode: CanvasMode.Inserting,
+            layerType: LayerType.Text,
+          });
+          break;
+        case "s":
+        case "S":
+          setCanvasState({
+            mode: CanvasMode.Inserting,
+            layerType: LayerType.Note,
+          });
+          break;
+        case "p":
+        case "P":
+          setCanvasState({
+            mode: CanvasMode.Pencil,
+          });
+          break;
       }
     }
 
