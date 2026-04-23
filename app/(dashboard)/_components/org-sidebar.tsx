@@ -79,8 +79,4 @@ export const OrgSidebar = () => {
       </div>
     </div>
   );
-<<<<<<< ours
 };
-=======
-};
->>>>>>> theirs
