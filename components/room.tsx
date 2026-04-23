@@ -6,6 +6,10 @@ import type { ReactNode } from "react";
 
 import { RoomProvider } from "@/liveblocks.config";
 import { Layer } from "@/types/canvas";
+import {
+  DEFAULT_COMPILER_LANGUAGE,
+  getLanguageConfig,
+} from "@/lib/compiler";
 
 type RoomProps = {
   children: React.ReactNode;
@@ -14,6 +18,8 @@ type RoomProps = {
 };
 
 export const Room = ({ children, roomId, fallback }: RoomProps) => {
+  const defaultCompilerConfig = getLanguageConfig(DEFAULT_COMPILER_LANGUAGE);
+
   return (
     <RoomProvider
       id={roomId}
@@ -26,7 +32,13 @@ export const Room = ({ children, roomId, fallback }: RoomProps) => {
       initialStorage={{
         layers: new LiveMap<string, LiveObject<Layer>>(),
         layerIds: new LiveList(),
-        compilerCode: "// Write your code here\n",
+        compilerCode: defaultCompilerConfig.template,
+        compilerLanguage: defaultCompilerConfig.id,
+        compilerInput: "",
+        compilerOutput: "Run the code to see shared output here.",
+        compilerStatus: "idle",
+        compilerLastRunAt: 0,
+        compilerLastRunBy: "",
       }}
     >
       <ClientSideSuspense fallback={fallback}>

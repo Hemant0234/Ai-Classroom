@@ -4,7 +4,6 @@ import type { PropsWithChildren } from "react";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/nextjs";
 
 import { Navbar } from "./_components/navbar";
-import { OrgSidebar } from "./_components/org-sidebar";
 import { Sidebar } from "./_components/sidebar";
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
@@ -14,13 +13,10 @@ const DashboardLayout = ({ children }: PropsWithChildren) => {
         <main className="h-full">
           <Sidebar />
 
-          <div className="pl-[60px] h-full">
-            <div className="flex gap-x-3 h-full relative">
-              <OrgSidebar />
-              <div className="h-full flex-1">
-                <Navbar />
-                {children}
-              </div>
+          <div className="h-full pl-[92px]">
+            <div className="h-full">
+              <Navbar />
+              {children}
             </div>
           </div>
         </main>

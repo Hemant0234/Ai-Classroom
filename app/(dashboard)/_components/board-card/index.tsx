@@ -2,6 +2,7 @@
 
 import { useAuth } from "@clerk/nextjs";
 import { formatDistanceToNow } from "date-fns";
+import { motion } from "framer-motion";
 import { MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -61,7 +62,16 @@ export const BoardCard = ({
 
   return (
     <Link href={`/board/${id}`}>
-      <div className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden">
+      <motion.div
+        whileHover={{
+          y: -8,
+          scale: 1.02,
+          boxShadow: "0 24px 60px rgba(15,23,42,0.16)",
+        }}
+        whileTap={{ scale: 0.985, y: -2 }}
+        transition={{ type: "spring", stiffness: 280, damping: 22 }}
+        className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden bg-white"
+      >
         <div className="relative flex-1 bg-amber-50">
           <Image src={imageUrl} alt={title} fill className="object-fit" />
           <Overlay />
@@ -80,7 +90,7 @@ export const BoardCard = ({
           onClick={toggleFavourite}
           disabled={pendingFavourite || pendingUnfavourite}
         />
-      </div>
+      </motion.div>
     </Link>
   );
 };
@@ -88,7 +98,7 @@ export const BoardCard = ({
 BoardCard.Skeleton = function BoardCardSkeleton() {
   return (
     <div className="aspect-[100/127] rounded-lg flex overflow-hidden">
-      <Skeleton className="h-full w-full" />
+      <Skeleton className="premium-shimmer h-full w-full" />
     </div>
   );
 };

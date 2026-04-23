@@ -81,6 +81,32 @@ body,
   }
 }
 
+.premium-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 45%, #e2e8f0 100%);
+}
+
+.premium-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 100%
+  );
+  animation: premium-shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes premium-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Fix LiveKit control bar overflow on small screens */
 .lk-control-bar {
   flex-wrap: wrap !important;
@@ -91,4 +117,89 @@ body,
 
 .lk-button-group {
   flex-shrink: 0;
+}
+
+.pip-livekit .lk-participant-tile {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 0 !important;
+  background: rgba(15, 23, 42, 0.78) !important;
+}
+
+.pip-livekit .lk-participant-media-video,
+.pip-livekit .lk-video-track,
+.pip-livekit video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover !important;
+}
+
+.pip-livekit .lk-participant-placeholder {
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.22), transparent 35%),
+    linear-gradient(180deg, rgba(30, 41, 59, 0.88), rgba(2, 6, 23, 0.96));
+}
+
+.pip-livekit .lk-participant-metadata {
+  left: 0.75rem !important;
+  right: 0.75rem !important;
+  bottom: 0.75rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(2, 6, 23, 0.58) !important;
+  backdrop-filter: blur(14px);
+}
+
+.pip-livekit .lk-participant-name {
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.pip-livekit .lk-control-bar {
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.pip-livekit .lk-button-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+
+.pip-livekit .lk-button {
+  min-height: 3rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: none !important;
+}
+
+.pip-livekit .lk-button:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+.pip-livekit .lk-disconnect-button,
+.pip-livekit .lk-button[data-lk-source="leave"] {
+  background: rgba(239, 68, 68, 0.16) !important;
+  color: rgb(254 202 202) !important;
+}
+
+.pip-livekit .lk-disconnect-button:hover,
+.pip-livekit .lk-button[data-lk-source="leave"]:hover {
+  background: rgba(239, 68, 68, 0.24) !important;
+}
+
+@media (max-width: 640px) {
+  .pip-livekit .lk-control-bar,
+  .pip-livekit .lk-button-group {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
 }

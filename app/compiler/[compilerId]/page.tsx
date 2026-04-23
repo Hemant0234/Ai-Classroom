@@ -13,7 +13,7 @@ type CompilerIdPageProps = {
 const CompilerIdPage = ({ params }: CompilerIdPageProps) => {
     return (
         <Room roomId={params.compilerId} fallback={<Loading />}>
-            <CompilerCanvas boardId={params.compilerId} />
+            <CompilerCanvas compilerId={params.compilerId} />
         </Room>
     );
 };

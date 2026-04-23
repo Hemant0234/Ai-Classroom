@@ -2,6 +2,7 @@
 
 import { useAuth } from "@clerk/nextjs";
 import { formatDistanceToNow } from "date-fns";
+import { motion } from "framer-motion";
 import { MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,7 +42,16 @@ export const CompilerCard = ({
 
     return (
         <Link href={`/compiler/${id}`}>
-            <div className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden">
+            <motion.div
+                whileHover={{
+                    y: -8,
+                    scale: 1.02,
+                    boxShadow: "0 24px 60px rgba(15,23,42,0.18)",
+                }}
+                whileTap={{ scale: 0.985, y: -2 }}
+                transition={{ type: "spring", stiffness: 280, damping: 22 }}
+                className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden bg-white"
+            >
                 <div className="relative flex-1 bg-neutral-900 border-b border-neutral-200">
                     <div className="absolute inset-0 z-0 bg-neutral-900 opacity-80" />
                     <Image src={imageUrl} alt={title} fill className="object-cover opacity-30" />
@@ -63,7 +73,7 @@ export const CompilerCard = ({
                     authorLabel={authorLabel}
                     createdAtLabel={createdAtLabel}
                 />
-            </div>
+            </motion.div>
         </Link>
     );
 };
@@ -71,7 +81,7 @@ export const CompilerCard = ({
 CompilerCard.Skeleton = function CompilerCardSkeleton() {
     return (
         <div className="aspect-[100/127] rounded-lg flex overflow-hidden">
-            <Skeleton className="h-full w-full" />
+            <Skeleton className="premium-shimmer h-full w-full" />
         </div>
     );
 };

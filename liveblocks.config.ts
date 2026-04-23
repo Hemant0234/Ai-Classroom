@@ -71,6 +71,12 @@ type Storage = {
   layers: LiveMap<string, LiveObject<Layer>>;
   layerIds: LiveList<string>;
   compilerCode?: string;
+  compilerLanguage?: string;
+  compilerInput?: string;
+  compilerOutput?: string;
+  compilerStatus?: string;
+  compilerLastRunAt?: number;
+  compilerLastRunBy?: string;
 };
 
 // Optionally, UserMeta represents static/readonly metadata on each user, as

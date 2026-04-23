@@ -42,12 +42,5 @@ export const siteConfig: Metadata = {
   authors: {
     name: "Kapil Thakur",
     url: "https://github.com/Kapil927",
-    
   },
-} as const;
-
-export const links = {
-  sourceCode: "https://github.com/Kapil927/CU-CLASSROOM",
-  cuRoom: "https://cu-room.vercel.app/",
-  gpt: "https://chatgpt.com/",
 } as const;
