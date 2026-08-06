@@ -1,0 +1,434 @@
+﻿
+> miro-clone@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.25
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+node.exe : Browserslist: 
+caniuse-lite is outdated. 
+Please run:
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Browser  
+  slist: c...ed. Please ru   
+ n::String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+  npx 
+update-browserslist-db@latest
+  Why you should do it 
+regularly: https://github.com
+/browserslist/update-db#readm
+e
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 57417 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\644.js:1:214)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 48239 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\app\(dashboard)\compiler
+\page.js:1:8582)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296) {
+  digest: '575470441'
+}
+
+Error occurred prerendering 
+page "/compiler". Read more: 
+https://nextjs.org/docs/messa
+ges/prerender-error
+
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 57417 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\644.js:1:214)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 48239 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\app\(dashboard)\compiler
+\page.js:1:8582)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296)
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 57417 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\644.js:1:214)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 93777 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\app\(dashboard)\page.js:
+1:10080)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296) {
+  digest: '2545735873'
+}
+
+Error occurred prerendering 
+page "/". Read more: https://
+nextjs.org/docs/messages/prer
+ender-error
+
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 57417 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\644.js:1:214)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 93777 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\app\(dashboard)\page.js:
+1:10080)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296)
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 68116 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\555.js:1:2892)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\node_modules\ne
+xt\dist\compiled\next-server\
+app-page.runtime.prod.js:12:9
+8819
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\node_modules\ne
+xt\dist\compiled\next-server\
+app-page.runtime.prod.js:12:9
+8906 {
+  digest: '1741667223'
+}
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 68116 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\555.js:1:2892)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\node_modules\ne
+xt\dist\compiled\next-server\
+app-page.runtime.prod.js:12:9
+8819
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\node_modules\ne
+xt\dist\compiled\next-server\
+app-page.runtime.prod.js:12:9
+8906 {
+  digest: '1741667223'
+}
+
+Error occurred prerendering 
+page "/_not-found". Read 
+more: https://nextjs.org/docs
+/messages/prerender-error
+
+TypeError: Cannot read 
+properties of undefined 
+(reading 'S')
+    at eg.exports.ev.exports 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\chunks\7
+07.js:212:97856)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\.next\server\ch
+unks\707.js:216:3985
+    at 36762 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\707.js:216:4023)
+    at t (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\.next\server
+\webpack-runtime.js:1:128)
+    at 68116 (C:\Users\Heman\
+Downloads\CU-CLASSROOM-main (
+1)\CU-CLASSROOM-main\.next\se
+rver\chunks\555.js:1:2892)
+    at Object.t [as require] 
+(C:\Users\Heman\Downloads\CU-
+CLASSROOM-main (1)\CU-CLASSRO
+OM-main\.next\server\webpack-
+runtime.js:1:128)
+    at require (C:\Users\Hema
+n\Downloads\CU-CLASSROOM-main
+ (1)\CU-CLASSROOM-main\node_m
+odules\next\dist\compiled\nex
+t-server\app-page.runtime.pro
+d.js:16:18839)
+    at i (C:\Users\Heman\Down
+loads\CU-CLASSROOM-main (1)\C
+U-CLASSROOM-main\node_modules
+\next\dist\compiled\next-serv
+er\app-page.runtime.prod.js:1
+2:88296)
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\node_modules\ne
+xt\dist\compiled\next-server\
+app-page.runtime.prod.js:12:9
+8819
+    at C:\Users\Heman\Downloa
+ds\CU-CLASSROOM-main (1)\CU-C
+LASSROOM-main\node_modules\ne
+xt\dist\compiled\next-server\
+app-page.runtime.prod.js:12:9
+8906
+   Generating static pages (7/10) 
+ Γ£ô Generating static pages (10/10)
+
+> Export encountered errors 
+on following paths:
+	/(dashboard)/compiler/page: 
+/compiler
+	/(dashboard)/page: /
+	/_not-found/page: 
+/_not-found

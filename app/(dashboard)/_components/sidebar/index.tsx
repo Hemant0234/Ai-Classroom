@@ -134,7 +134,7 @@ const SidebarLink = ({
       {/* Icon box */}
       <div
         className={cn(
-          "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-colors",
+          "flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border transition-colors",
           isActive
             ? c.icon
             : "border-white/8 bg-slate-900/70 group-hover:border-white/14 group-hover:bg-slate-800/60",
@@ -223,14 +223,14 @@ const OrgAvatar = ({
   name?: string;
   size?: "sm" | "md";
 }) => {
-  const dim = size === "sm" ? "h-8 w-8 rounded-lg" : "h-10 w-10 rounded-xl";
+  const dim = size === "sm" ? "h-8 w-8 rounded-lg" : "h-8 w-8 rounded-xl";
   return (
     <div className={cn("relative shrink-0 overflow-hidden border border-white/10 bg-slate-800", dim)}>
       {imageUrl ? (
         <Image src={imageUrl} alt={name ?? "Org"} fill className="object-cover" />
       ) : (
         <div className="flex h-full w-full items-center justify-center">
-          <Building2 className={cn("text-slate-500", size === "sm" ? "h-3.5 w-3.5" : "h-4 w-4")} />
+          <Building2 className={cn("text-slate-500", size === "sm" ? "h-3 w-3" : "h-3 w-3")} />
         </div>
       )}
     </div>
@@ -557,7 +557,7 @@ export const Sidebar = () => {
               transition={{ type: "spring", stiffness: 340, damping: 22 }}
               className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-3"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-white/95 p-1.5 shadow-md">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[13px] bg-white/95 p-1.5 shadow-md">
                 <Image src="/cu2.png" alt="CU Classroom" width={38} height={38} className="rounded-lg" />
               </div>
               <AnimatePresence initial={false}>
@@ -609,7 +609,7 @@ export const Sidebar = () => {
             sideOffset={16}
           >
             <div className="flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.04] px-3 py-2.5 transition-colors hover:bg-white/[0.07]">
-              <Avatar className="h-10 w-10 shrink-0 border border-white/10">
+              <Avatar className="h-7 w-7 shrink-0 border border-white/10">
                 <AvatarImage src={user?.imageUrl} alt={user?.fullName ?? "Profile"} />
                 <AvatarFallback className="bg-sky-500/18 text-[12px] font-semibold text-sky-200">
                   {user?.firstName?.[0] ??
